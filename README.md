@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FORTUNA_PH — сайт-визитка автомобильного фотографа
 
-## Getting Started
+Премиальный тёмный сайт-визитка: Next.js 16 + Tailwind CSS v4 + Framer Motion.
+Акцент — шампань `#D4AF6A`. Шрифты Geist / Geist Mono (локально, `app/fonts/`).
 
-First, run the development server:
+## Структура
+
+- `app/page.tsx` — вся разметка страницы (Hero, Ticker, Формат, Зачем, Локации, Условия, Портфолио, Соцсети, Контакты, Footer)
+- `content.ts` — ВСЕ тексты, ссылки и список фото сайта (правится в одном месте)
+- `app/globals.css` — дизайн-токены Tailwind (цвета, шрифты, анимации kenburns/ticker)
+- `components/AnimateIn.tsx` — анимация появления блоков (Framer Motion)
+- `components/Year.tsx` — текущий год в футере
+- `public/carph1.jpg` … `carph9.jpg` — фотографии
+
+## Запуск
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # разработка → http://localhost:3000
+npm run build    # production-сборка
+npm run start    # запуск собранной версии
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Фотографии
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Положи свои фото в `public/` со строгими именами:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Файл | Назначение | Пропорции |
+|---|---|---|
+| `carph1.jpg` | фон Hero | широкий кадр (16:9) |
+| `carph2.jpg` … `carph7.jpg` | 6 плиток портфолио | вертикальные (3:4) |
+| `carph8.jpg`, `carph9.jpg` | про запас (не показываются) | любые |
 
-## Learn More
+Сейчас там серые заглушки — просто перезапиши файлы своими кадрами.
 
-To learn more about Next.js, take a look at the following resources:
+## Деплой на Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Залей проект на GitHub (`git push`).
+2. На [vercel.com](https://vercel.com) → **Add New Project** → Import Git Repository → **Deploy**.
+3. Через минуту сайт будет по адресу `fortuna-ph.vercel.app` (домен меняется в настройках проекта → Domains).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
