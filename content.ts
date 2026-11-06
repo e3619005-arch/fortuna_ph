@@ -50,12 +50,14 @@ export const TERMS = {
 };
 
 export const PORTFOLIO = [
-  { src: "/carph2.jpg", label: "02 · MOSCOW" },
-  { src: "/carph3.jpg", label: "03 · PARKING" },
-  { src: "/carph4.jpg", label: "04 · FOREST" },
-  { src: "/carph5.jpg", label: "05 · NIGHT" },
-  { src: "/carph6.jpg", label: "06 · BRIDGE" },
-  { src: "/carph7.jpg", label: "07 · DAWN" },
+  { src: "/carph2.jpg" },
+  { src: "/carph3.jpg" },
+  { src: "/carph4.jpg" },
+  { src: "/carph5.jpg" },
+  { src: "/carph6.jpg" },
+  { src: "/carph7.jpg" },
+  { src: "/carph8.jpg" },
+  { src: "/carph9.jpg" },
 ];
 
 export const FOOTER =

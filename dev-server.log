@@ -1,0 +1,19 @@
+
+> fortuna-ph@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.5 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://26.252.172.67:3000
+✓ Ready in 1146ms
+✓ Running next.config.ts took 386ms
+- Cache Components enabled
+- Partial Prefetching enabled
+
+ GET / 200 in 688ms (next.js: 311ms, application-code: 377ms)
+ GET / 200 in 163ms (next.js: 3ms, application-code: 160ms)
+✓ Compiled in 660ms
+ GET / 200 in 91ms (next.js: 6ms, application-code: 85ms)
+✓ Compiled in 148ms
+ GET / 200 in 79ms (next.js: 2ms, application-code: 76ms)
+ GET / 200 in 126ms (next.js: 1.3ms, application-code: 125ms)

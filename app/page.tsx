@@ -134,7 +134,7 @@ export default function Home() {
           <div className="font-mono text-xs text-accent tracking-[0.3em] mb-10">{"// 05 — ПОРТФОЛИО"}</div>
           <h2 className="text-3xl md:text-5xl font-medium mb-16 max-w-2xl">Избранные кадры</h2>
         </AnimateIn>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {PORTFOLIO.map((p, i) => (
             <AnimateIn key={p.src} delay={i * 0.05}>
               <div className="group relative aspect-[3/4] overflow-hidden bg-panel">
@@ -142,15 +142,10 @@ export default function Home() {
                   src={p.src}
                   alt=""
                   fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <div className="font-mono text-[10px] md:text-xs tracking-[0.2em] text-ink bg-bg/80 backdrop-blur px-3 py-2 border border-line">
-                    {p.label}
-                  </div>
-                </div>
               </div>
             </AnimateIn>
           ))}
