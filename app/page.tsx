@@ -136,18 +136,20 @@ export default function Home() {
         </AnimateIn>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {PORTFOLIO.map((p, i) => (
-            <AnimateIn key={p.src} delay={i * 0.05}>
-              <div className="group relative aspect-[3/4] overflow-hidden bg-panel">
-                <Image
-                  src={p.src}
-                  alt=""
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-              </div>
-            </AnimateIn>
+            <div
+              key={p.src}
+              className="fade-up group relative aspect-[3/4] overflow-hidden bg-panel"
+              style={{ animationDelay: `${i * 60}ms` }}
+            >
+              <Image
+                src={p.src}
+                alt=""
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+            </div>
           ))}
         </div>
       </section>
