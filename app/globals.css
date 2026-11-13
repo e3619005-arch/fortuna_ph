@@ -47,16 +47,10 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
 .kenburns { animation: kenburns 24s ease-in-out infinite alternate; }
 .ticker-track { animation: ticker 40s linear infinite; }
-.fade-up { animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
 @media (prefers-reduced-motion: reduce) {
-  .kenburns, .ticker-track, .fade-up { animation: none !important; }
+  .kenburns, .ticker-track { animation: none !important; }
 }
 

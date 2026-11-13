@@ -1,5 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
+import ScrollProgress from "@/components/ScrollProgress";
+import Preloader from "@/components/Preloader";
 
 const geist = localFont({
   src: "./fonts/Geist-Regular.woff2",
@@ -24,7 +26,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru" className={`${geist.variable} ${geistMono.variable}`}>
-      <body className="bg-bg text-ink">{children}</body>
+      <body className="bg-bg text-ink">
+        <Preloader />
+        <ScrollProgress />
+        {children}
+      </body>
     </html>
   );
 }
