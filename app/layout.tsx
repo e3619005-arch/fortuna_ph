@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://fortuna-ph.vercel.app"),
+  metadataBase: new URL("https://fortuna-ph.netlify.app"),
   title: "FORTUNA_PH — автомобильный фотограф в Москве",
   description: "Личная съёмка автомобиля: фото и видео. Москва, в пределах МКАД.",
   openGraph: {

@@ -1,18 +1,10 @@
 import type { NextConfig } from "next";
-import { PHOTO_VERSION } from "./photo-version";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
   images: {
-    localPatterns: [
-      {
-        pathname: "/carph*.jpg",
-        search: `?v=${PHOTO_VERSION}`,
-      },
-    ],
+    unoptimized: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
   turbopack: {
     rules: {
       "*.css": {
