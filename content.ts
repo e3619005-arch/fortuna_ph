@@ -81,14 +81,14 @@ export const TERMS = {
 };
 
 export const PORTFOLIO = [
-  { src: photoPath("/carph2.jpg") },
-  { src: photoPath("/carph3.jpg") },
-  { src: photoPath("/carph4.jpg") },
-  { src: photoPath("/carph5.jpg") },
-  { src: photoPath("/carph6.jpg") },
-  { src: photoPath("/carph7.jpg") },
-  { src: photoPath("/carph8.jpg") },
-  { src: photoPath("/carph9.jpg") },
+  { src: photoPath("/carph2.webp") },
+  { src: photoPath("/carph3.webp") },
+  { src: photoPath("/carph4.webp") },
+  { src: photoPath("/carph5.webp") },
+  { src: photoPath("/carph6.webp") },
+  { src: photoPath("/carph7.webp") },
+  { src: photoPath("/carph8.webp") },
+  { src: photoPath("/carph9.webp") },
 ];
 
 export const MANIFEST = {

@@ -4,3 +4,15 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Фото: вечный кэш. При замене файлов подними PHOTO_VERSION в photo-version.ts —
+# URL поменяется (?v=N) и клиенты получат новые файлы.
+[[headers]]
+  for = "/carph*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/carph1.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
