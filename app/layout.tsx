@@ -12,14 +12,17 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
 });
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://fortuna-ph.netlify.app";
+
 export const metadata = {
-  metadataBase: new URL("https://fortuna-ph.netlify.app"),
+  metadataBase: new URL(SITE_URL),
   title: "FORTUNA_PH — автомобильный фотограф в Москве",
   description: "Личная съёмка автомобиля: фото и видео. Москва, в пределах МКАД.",
   openGraph: {
     title: "FORTUNA_PH",
     description: "Снимаю то, за что ты любишь свою машину.",
-    images: ["/carph1.jpg"],
+    images: [`${SITE_URL}/carph1.jpg`],
   },
 };
 

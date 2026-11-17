@@ -50,16 +50,18 @@ npm run img    # originals/*.jpg -> public/ (hero: JPEG 1920px, тайлы: WebP
 те же имена и URL, кэш у них «вечный» через заголовки в `netlify.toml`).
 Версия подключается в `content.ts` автоматически.
 
-## Деплой на Netlify
+## Деплой на GitHub Pages
 
-Сайт настроен на статический экспорт (`output: "export"` в `next.config.ts`)
-и конфиг сборки лежит в `netlify.toml`.
+Сайт настроен на статический экспорт (`output: "export"` в `next.config.ts`).
+Публикация — автоматически через GitHub Actions (`.github/workflows/deploy.yml`):
+каждый `git push` в `main` собирает сайт и выкладывает на
+`https://<ник>.github.io/fortuna_ph/`.
 
-1. Залей проект на GitHub (`git push`).
-2. На [netlify.com](https://netlify.com) → **Add new site** → **Import from Git** →
-   выбери репозиторий → **Deploy** (настройки подхватятся из `netlify.toml`).
-3. Через 1–2 минуты сайт будет по адресу `fortuna-ph.netlify.app`
-   (имя меняется в Site configuration → Site name).
+Одноразовая настройка репозитория:
+1. Settings → General → Danger Zone → **Change visibility** → сделать репозиторий **публичным**
+   (GitHub Pages на бесплатном тарифе работает только для публичных репо).
+2. Settings → **Pages** → Source: **GitHub Actions** → Save.
 
-Каждый `git push` в `main` автоматически пересобирает сайт.
+В CI задаются `NEXT_PUBLIC_BASE_PATH=/fortuna_ph` и `NEXT_PUBLIC_SITE_URL` —
+локально и на резервном Netlify сайт работает от корня без изменений.
 
